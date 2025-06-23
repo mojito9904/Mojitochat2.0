@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mojitochat</title>
+        <!--file css-->
+        <link rel="stylesheet" href="filecss/index.css">
+        <link rel="stylesheet" href="filecss/adattamento.css">
+
+        <!--per icona-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!--script-->
+        <script src="filejs/indexione.js" defer></script>
+    </head>    
+    <body>
+        <pre id="glowing-text_ind">
+
+            ███▄ ▄███▓ ▒█████   ▄▄▄██▀▀▀██▓▄▄▄█████▓ ▒█████   ▄████▄   ██░ ██  ▄▄▄     ▄▄▄█████▓
+            ▓██▒▀█▀ ██▒▒██▒  ██▒   ▒██  ▓██▒▓  ██▒ ▓▒▒██▒  ██▒▒██▀ ▀█  ▓██░ ██▒▒████▄   ▓  ██▒ ▓▒
+            ▓██    ▓██░▒██░  ██▒   ░██  ▒██▒▒ ▓██░ ▒░▒██░  ██▒▒▓█    ▄ ▒██▀▀██░▒██  ▀█▄ ▒ ▓██░ ▒░
+            ▒██    ▒██ ▒██   ██░▓██▄██▓ ░██░░ ▓██▓ ░ ▒██   ██░▒▓▓▄ ▄██▒░▓█ ░██ ░██▄▄▄▄██░ ▓██▓ ░ 
+            ▒██▒   ░██▒░ ████▓▒░ ▓███▒  ░██░  ▒██▒ ░ ░ ████▓▒░▒ ▓███▀ ░░▓█▒░██▓ ▓█   ▓██▒ ▒██▒ ░ 
+            ░ ▒░   ░  ░░ ▒░▒░▒░  ▒▓▒▒░  ░▓    ▒ ░░   ░ ▒░▒░▒░ ░ ░▒ ▒  ░ ▒ ░░▒░▒ ▒▒   ▓▒█░ ▒ ░░   
+            ░  ░      ░  ░ ▒ ▒░  ▒ ░▒░   ▒ ░    ░      ░ ▒ ▒░   ░  ▒    ▒ ░▒░ ░  ▒   ▒▒ ░   ░    
+            ░      ░   ░ ░ ░ ▒   ░ ░ ░   ▒ ░  ░      ░ ░ ░ ▒  ░         ░  ░░ ░  ░   ▒    ░      
+                   ░       ░ ░   ░   ░   ░               ░ ░  ░ ░       ░  ░  ░      ░  ░        
+                                                              ░                                       
+        </pre>
+
+        <div id="alert-error">
+            ⛔Le credenziali sono sbagliate 
+        </div>
+        <div id="div_ind">
+            <form id="form_ind" name="form">
+                    <label>Nickname</label>
+                    <input type="text" id="nick" name="nick" placeholder="Inserire il tuo nickname"><br>
+                    <div id="alert-nick">
+                        <p>⛔Inserire il nickname</p>
+                    </div>
+                    <label>Password</label>
+                    <input type="password" id="pass" name="pass" placeholder="Inserire la tua password"><br>
+                    <div id="alert-pass">
+                        ⛔Inserire la password
+                    </div>
+                    <div id="azioni">
+                        <input type="submit" value="accedi" id="invio">
+                        <input type="submit" value="registrati" id="registrati">
+                    </div>
+            </form>
+        </div>
+    </body>
+</html>
