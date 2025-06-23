@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(11, 6, 34);
+    color: aquamarine;
+    display: grid;
+    place-items: center;
+}
+
+#glowing-text_ind{
+    width: auto;
+    margin-top: 2.5cm;
+    text-align: center;
+    font-size: 16px;
+    color:darkblue;
+    animation: glow 2s infinite alternate;
+}
+
+p{
+    font-size: 20px;
+}
+
+#p{
+    font-style: italic;
+    margin-top: 5px;
+}
+
+input{
+    height: 40px;
+    width: 280px;
+    margin-top: -20px;
+    margin-bottom: -21px;
+    background-color: rgb(24, 24, 85);
+    color: aquamarine;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input:hover{
+    background-color: rgb(15, 15, 51);
+}

@@ -1,0 +1,124 @@
+/*index*/
+body{
+    background-color: rgb(11, 6, 34);
+}
+
+#glowing-text_ind{
+    width: auto;
+    margin-top: 1.5cm;
+    margin-left: -2cm;
+    text-align: center;
+    font-size: 16px;
+    color:darkblue;
+    animation: glow 2s infinite alternate;
+}
+
+#div_ind{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 34%;
+    border: 1px solid white;
+    display: grid;
+    place-items: center;
+    border-radius: 4%;
+}
+
+#form_ind{
+    position: absolute;
+    font-size: 20px;
+    scale: 1.1;
+    color: aquamarine;
+    display: grid;
+    place-items: center;
+}
+
+#div_l{
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 18px;
+}
+
+input{
+    color: aquamarine;
+    border-radius: 20px;
+}
+
+input::placeholder{
+    color: #bbbbbb;
+    font-size: 14px;
+    text-align: center;
+}
+
+#nick, #pass{
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border: 1px solid aquamarine;
+    height: 30px;
+    text-align: center;
+}
+
+#azioni{
+    margin-top: -7%;
+    width: 180px;
+}
+
+#registrati, #invio{
+    bottom: 3%;
+    margin-top: 15px;
+    background-color: rgb(24, 24, 85);
+    color: aquamarine;
+    border: none;
+    padding: 5px 10px; /* Aggiunge spazio interno */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il bottone */
+}
+
+#registrati{
+    float: right;
+}
+
+#invio{
+    float: left;
+}
+
+#invio:hover, #registrati:hover{
+    background-color: rgb(15, 15, 51); /* Colore di sfondo più scuro quando il bottone è hoverato */
+}
+
+/*sono gli alert */
+#alert-pass, #alert-nick, #alert-error{
+    font-size: 15px;
+    color: red;
+    display: none; 
+    position: absolute; 
+    left: 50%; 
+    transform: translate(-50%);
+}
+
+#alert-error{
+    font-size: 20px;
+    top: 30%;
+}
+
+#alert-nick{
+    top: 22%;
+    width: 80%;
+}
+
+#alert-pass{
+    top: 72%;
+    width: 80%;
+}
+
+input:-webkit-autofill { /*per non far cambiare al browser il colore di sfondo*/
+    text-align: center;
+    background-color: black !important;
+    -webkit-text-fill-color: aquamarine !important;
+    transition: background-color 5000000s ease-in-out 0s; /* Trucco per ritardare il cambio */
+}
