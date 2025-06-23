@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <title>Mojitochat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="filecss/home.css">
+        <link rel="stylesheet" href="filecss/adattamento.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!--per icona-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!--script-->
+        <script src="/filejs/windows.js" defer></script>
+    </head>
+
+    <body>
+        <div id="fa">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <pre id="glowing-text_home">
+
+                ███▄ ▄███▓ ▒█████   ▄▄▄██▀▀▀██▓▄▄▄█████▓ ▒█████   ▄████▄   ██░ ██  ▄▄▄     ▄▄▄█████▓
+                ▓██▒▀█▀ ██▒▒██▒  ██▒   ▒██  ▓██▒▓  ██▒ ▓▒▒██▒  ██▒▒██▀ ▀█  ▓██░ ██▒▒████▄   ▓  ██▒ ▓▒
+                ▓██    ▓██░▒██░  ██▒   ░██  ▒██▒▒ ▓██░ ▒░▒██░  ██▒▒▓█    ▄ ▒██▀▀██░▒██  ▀█▄ ▒ ▓██░ ▒░
+                ▒██    ▒██ ▒██   ██░▓██▄██▓ ░██░░ ▓██▓ ░ ▒██   ██░▒▓▓▄ ▄██▒░▓█ ░██ ░██▄▄▄▄██░ ▓██▓ ░ 
+                ▒██▒   ░██▒░ ████▓▒░ ▓███▒  ░██░  ▒██▒ ░ ░ ████▓▒░▒ ▓███▀ ░░▓█▒░██▓ ▓█   ▓██▒ ▒██▒ ░ 
+                ░ ▒░   ░  ░░ ▒░▒░▒░  ▒▓▒▒░  ░▓    ▒ ░░   ░ ░▒░▒░ ░ ░▒ ▒  ░ ▒ ░░▒░▒ ▒▒   ▓▒█░ ▒ ░░   
+                ░  ░      ░  ░ ▒ ▒░  ▒ ░▒░   ▒ ░    ░      ░ ░ ░ ▒  ░         ░  ░░ ░  ░   ▒    ░      
+            </pre>
+
+            <div id="option">
+                <p id="settings"><i class="fa-solid fa-gear"></i>Opzioni</p>
+            </div>
+
+            <div id="quadro">
+                <p><i class="fa-solid fa-users"></i> Persone Online: </p>
+                <p id="online"></p>
+            </div>
+
+            <div id="axe">
+                <p id="frantoio"></p>
+                <div id="profilo">
+                    <img src="" id="greg">
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <!-- per finestre a comparsa-->
+             <div id="window_impostazioni">
+                <p><i class="fa-solid fa-gear"></i>Opzioni</p>
+                <button class="close" onclick="Close_Settings()">x</button>
+                <ul>
+                    <li onclick="Open_Account()"><i class="fa-solid fa-user"></i> Account</li>
+                    <hr>
+                    <li onclick="Open_Logout()"><i class="fa-solid fa-door-open"></i>Log Out</li>
+                    <hr>
+                </ul>
+            </div>
+            <div id="window_account">
+                <p><i class="fa-solid fa-user"></i><a href="registrati.html" id="dermatite"> Nuovo Account</a></p>
+                <button class="close" onclick="Close_Account()">x</button>
+            </div>
+            <div id="window_logout">
+                <button onclick="window.close()" id="out"><i class="fa-solid fa-door-open"></i>Log Out</button>
+                <button class="close" onclick="Close_Logout()">x</button>
+            </div>
+            <div id="chat">
+                <div id="sole"></div>
+                <div id="mess"></div>
+                <div id="message">
+                    <textarea id="frase" placeholder="Inserire il tuo messaggio"></textarea> 
+                    <i class="fa fa-arrow-right" id="arrow"></i>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>
