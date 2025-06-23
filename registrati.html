@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <title>Mojitochat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--css-->
+        <link rel="stylesheet" href="filecss/registrati.css">
+        <link rel="stylesheet" href="filecss/adattamento.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!--per icona-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!--script-->
+        <script src="filejs/registrazione.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
+    </head>
+    <body>
+        <pre id="glowing-text_reg">
+
+            ███▄ ▄███▓ ▒█████   ▄▄▄██▀▀▀██▓▄▄▄█████▓ ▒█████   ▄████▄   ██░ ██  ▄▄▄     ▄▄▄█████▓
+            ▓██▒▀█▀ ██▒▒██▒  ██▒   ▒██  ▓██▒▓  ██▒ ▓▒▒██▒  ██▒▒██▀ ▀█  ▓██░ ██▒▒████▄   ▓  ██▒ ▓▒
+            ▓██    ▓██░▒██░  ██▒   ░██  ▒██▒▒ ▓██░ ▒░▒██░  ██▒▒▓█    ▄ ▒██▀▀██░▒██  ▀█▄ ▒ ▓██░ ▒░
+            ▒██    ▒██ ▒██   ██░▓██▄██▓ ░██░░ ▓██▓ ░ ▒██   ██░▒▓▓▄ ▄██▒░▓█ ░██ ░██▄▄▄▄██░ ▓██▓ ░ 
+            ▒██▒   ░██▒░ ████▓▒░ ▓███▒  ░██░  ▒██▒ ░ ░ ████▓▒░▒ ▓███▀ ░░▓█▒░██▓ ▓█   ▓██▒ ▒██▒ ░ 
+            ░ ▒░   ░  ░░ ▒░▒░▒░  ▒▓▒▒░  ░▓    ▒ ░░   ░ ▒░▒░▒░ ░ ░▒ ▒  ░ ▒ ░░▒░▒ ▒▒   ▓▒█░ ▒ ░░   
+            ░  ░      ░  ░ ▒ ▒░  ▒ ░▒░   ▒ ░    ░      ░ ▒ ▒░   ░  ▒    ▒ ░▒░ ░  ▒   ▒▒ ░   ░    
+            ░      ░   ░ ░ ░ ▒   ░ ░ ░   ▒ ░  ░      ░ ░ ░ ▒  ░         ░  ░░ ░  ░   ▒    ░      
+                   ░       ░ ░   ░   ░   ░               ░ ░  ░ ░       ░  ░  ░      ░  ░        
+                                                              ░                                       
+        </pre>
+
+        <div id="div_reg">
+                <form  id="formcaptcha"  method="POST">
+                    <!--nickname-->
+                    <label style="margin-top: 2%;">Nickname</label>
+                    <input type="text" id="nick" placeholder="Inserire il nickname"><br>
+                    <div class="alert" style="margin-top: -7%;">
+                        <div id="alert-nick">
+                            ⛔Inserire il nickname
+                        </div>
+                        <div id="nick_gia_uso">
+                            ⛔Nickname già in uso
+                        </div>
+                    </div>
+                    <!------------>
+
+                    <!--email-->
+                    <label>email</label>
+                    <input type="email" id="email" placeholder="Inserire l'email"><br>
+                    <div class="alert" style="margin-top: -7%;">
+                        <div id="alert-email">
+                            ⛔Inserire l'email
+                        </div>
+                        <div id="email_non_valida">
+                            ⛔Email non valida
+                        </div>
+                        <div id="email_gia_uso">
+                            ⛔Email gia in uso
+                        </div>
+                    </div>
+                    <!--------->
+
+                    <!--password-->
+                    <label>Password</label>
+                    <div>
+                        <input type="password" id="pass" placeholder="Inserire la password">
+                        <i id ="pass_clicked" class='far fa-eye-slash' onclick="pass_clicked()"></i>
+                    </div>
+                    <div class="alert" style="margin-top: 1%;">
+                        <div id="alert-pass">
+                            ⛔Inserire la password
+                        </div>
+                        <div id="alert-pass-lung-min">
+                            ⛔password troppo corta
+                        </div>
+                        <div id="alert-pass-lung-max">
+                            ⛔password troppo lunga
+                        </div>
+                        <div id="alert-pass-num">
+                            ⛔Inserire dei numeri
+                        </div>
+                        <div id="alert-pass-speciale">
+                            ⛔Inserire dei caratteri speciali
+                        </div>
+                    </div><br>
+                    
+                    <!--reinserire password-->
+                    <label>Reinserire password</label>
+                    <div>
+                        <input type="password" id="check" placeholder="Reinserire la password">
+                        <i id="check_clicked" class='far fa-eye-slash' onclick="check_clicked()"></i>
+                    </div>
+                    <div class="alert" style="margin-top: 1%;">
+                        <div id="alert-check">
+                            ⛔Le password non coincidono
+                        </div>
+                    </div>
+
+                    <div id="azioni">
+                        <input type="submit" value="registrati" id="registrati" onclick="register(event)">
+                        <input type="submit" value="indietro" id="invio" onclick="indietro(event)">
+                    </div>
+                </form>
+
+                <div id="arcimboldo">
+                    <div id="p">
+                        <p>immagine profilo</p>
+                        <p style="margin-top: -10%;">(facoltativo)</p>
+                    </div>
+
+                    <img src="default.jpeg" id="urlo">
+                    <label for="giumbo" id="cacao">carica immagine</label>
+                    <input type="file" id="giumbo" accept="image/*" hidden>
+                </div>
+        </div>
+
+        <script>            
+            const palla=document.getElementById("giumbo");
+            const torta=document.getElementById("urlo");
+            
+            //visualizzazione dell'immagine selezionata nel tag img
+            palla.addEventListener("change", function(){
+                if(palla.files.length>0){
+                    const porco=palla.files[0];
+                    const guatemala=new FileReader();// legge il contenuto 
+
+                    guatemala.onload=function(e){
+                        torta.src=e.target.result;
+                    };
+                    guatemala.readAsDataURL(porco); //converte il contenuto in url
+                }
+            });
+        </script>
+    </body> 
+</html>
